@@ -2,6 +2,12 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 12px;
+}
+
+h2{
+    font-size: 24px;
 }
 
 .header{
@@ -19,7 +25,7 @@
 }
 
 .logo, .search{
-    width: 150px;
+    width: 120px;
 }
 
 .glass{
@@ -43,6 +49,14 @@
     display: none;
 }
 
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
 ul{
     list-style: none;
 }
@@ -60,11 +74,17 @@ ul{
     width: 100%;
 }
 
-.main-products{
+.home-main{
+    background-color: #ebebeb;
+    padding-bottom: 15px;
+}
+
+.products-list{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+
 }
 
 .product-pic{
@@ -85,9 +105,11 @@ ul{
 }
 
 article{
+    width: 80%;
     border: solid #ebebeb 1px;
     margin: 10px;
     padding: 15px;
+    background-color: white;
 }
 
 .truck{
@@ -95,18 +117,117 @@ article{
     color: #39b54a;
     border-radius: 50%;
     padding: 5px;
+    position: relative;
+    left: 85%;
+    bottom: 15px;
+    transition: rotate, 1s;
+}
+
+.truck:hover{
+    rotate: -90deg;
+}
+
+.price{
+    font-size: 18px;
+    flex-grow: 0.3;
+    margin: 3% 0%;
 }
 
 .discount{
     color: #39b54a;
+    font-size: 16px;
+    flex-grow: 0.7;
+    margin: 3% 0%;
 }
 
-.main-products .description {
-    display: none
+.products-list .description {
+    display: none;
+    font-size: 16px;
 }
 
-.main-products :hover  .description{
-    display: block
+.pricebox {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.footer-h2{
+    font-size: 18px;
+    padding: 5px;
+}
+
+.footer-p{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.icons{
+    color: #1259c3;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.copyright{
+    padding: 15px;
+}
+
+@media screen and (min-width: 361px) {
+    .burger{
+        display: none;
+    }
+
+    .logo-search{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo, .search{
+        width: 150px;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li{
+        margin: 10px 20px;
+    }
+
+    .header-info{
+        height: 0px;
+    }
+
+    .products-list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    article{
+        width: 40%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    
+    .products-list .description{
+        display: block;
+    }
+
+    .site{
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 @media (min-width: 769px){
@@ -116,12 +237,23 @@ article{
 
     .logo-search{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    }
+
+    .logo, .search{
+        width: 150px;
+    }
+
+    .pay{
+        position: relative;
+        bottom: 50px;
     }
 
     .menu{
         display: flex;
         justify-content: space-between;
+        position: relative;
+        top: -15px;
     }
 
     .menu ul{
@@ -136,12 +268,104 @@ article{
         height: 0px;
     }
 
-    .article{
+    .products-list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    article{
+        width: 20%;
+        box-shadow: 0px 0px 10px white;
+    }
+
+    article:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+        
+    .products-list .description{
+        display: none;
+    }
+
+    article:hover .description {
+        display: block;
     }
     
     .site{
         display: flex;
         justify-content: space-around;
     }
+
+    .footer{
+        display: flex;
+        height: 180px;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    }
+    
+    .footer-h2{
+        font-size: 18px;
+        padding: 5px;
+    }
+    
+    .footer-p{
+        font-size: 15px;
+        padding: 5px;
+    }
+    
+    .icons{
+        color: #1259c3;
+        font-size: 25px;
+        padding: 5px;
+    }
+    
+}
+
+.login-main{
+    background-color: #ebebeb;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20%;
+}
+
+.namebox{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.passbox{
+    padding-bottom: 10px;
+}
+
+.button{
+    margin-bottom: 20px;
+    height: 30px;
+    width: 60%;
+    border: none;
+    color: white;
+    background-color: #1259c3;
+}
+
+input{
+    width: 60%;
+    height: 30px;
+    border: none;
+    flex: 1;
+}
+
+input::placeholder{
+    padding-left: 10px;
+}
+
+.button:hover{
+    background-color: #0022AA;
 }
