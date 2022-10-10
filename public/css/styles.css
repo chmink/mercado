@@ -173,6 +173,11 @@ article {
   color: #1259c3;
   font-size: 25px;
   padding: 5px;
+  transition: color 0.5s;
+}
+
+.icons:hover{
+  color:#ebebeb;
 }
 
 .copyright {
@@ -215,6 +220,7 @@ input {
   border: none;
   flex: 1;
   border-radius: 5px;
+  padding: 5px;
 }
 
 input::placeholder {
