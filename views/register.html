@@ -70,58 +70,108 @@
         </div>
       </div>
     </header>
-    <main>
-      <form action="/" method="get">
-        <div>
-          <label for="name">Nombre y apellido</label>
-          <input type="text" name="name" id="name" minlength="2" />
-        </div>
+    <main class="register-main">
+      <div>
+        <form class="register" action="/" method="get">
+          <div class="body-a">
+            <div>
+              <label for="name"></label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                minlength="2"
+                placeholder="Nombre y apellido"
+              />
+            </div>
+            <div>
+              <label for="id"></label>
+              <input
+                type="text"
+                name="id"
+                id="id"
+                minlength="2"
+                placeholder="Nombre de usuario"
+              />
+            </div>
+            <h3>Fecha de Nacimiento</h3>
+            <div>
+              <label for="birthday"></label>
+              <input type="date" name="birthday" id="birthday" />
+            </div>
+            <div>
+              <label for="address"></label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Domicilio"
+              />
+            </div>
+            <h3>Perfil del usuario</h3>
+            <div class="profile">
+              <label for="profile"></label>
+              <input type="radio" name="profile" value="Vender" />Vender
+              <input type="radio" name="profile" value="Comprar" />Comprar
+            </div>
+          </div>
+          <div class="body-b">
+            <h3>Categorías de interes</h3>
+            <div class="categories">
+              <label for="categories"></label>
+              <label>
+                <input type="checkbox" name="categories" value="Electro" />
+                <span>Electro</span>
+              </label>
+              <label>
+                <input type="checkbox" name="categories" value="Moda" />
+                <span>Moda</span>
+              </label>
+              <label>
+                <input type="checkbox" name="categories" value="Hogar" />
+                <span>Hogar</span>
+              </label>
+              <label>
+                <input type="checkbox" name="categories" value="Juguetería" />
+                <span>Juguetería</span>
+              </label>
+              <label>
+                <input type="checkbox" name="categories" value="Vida Sana" />
+                <span>Vida sana</span>
+              </label>
+            </div>
+            <h3>Foto de usuario</h3>
+            <div><label for="picture"></label> <input type="file" /></div>
+          </div>
+          <div class="body-c">
+            <div>
+              <label for="password"></label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                minlength="8"
+                placeholder="Contraseña"
+              />
+            </div>
+            <div>
+              <label for="password"></label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                minlength="8"
+                placeholder="Repetir contraseña"
+              />
+            </div>
+            </div>
+            <button class="submit" type="submit">Enviar</button>
 
-        <div>
-          <label for="id">Nombre de usuario</label>
-          <input type="text" name="id" id="id" minlength="2" />
-        </div>
-        <div>
-          <label for="birthday">Fecha de nacimiento</label>
-          <input type="date" name="birthday" id="birthday" />
-        </div>
-        <div>
-          <label for="address">Domicilio</label>
-          <input type="text" name="address" id="address" />
-        </div>
-        <div>
-          <label for="profile">Vender o Comprar</label>
-          <input type="radio" name="profile" value="Vender" />Vender
-          <input type="radio" name="profile" value="Comprar" />Comprar
-        </div>
-        <div>
-          <label for="categories">Categorías de interes</label>
-          <input type="checkbox" name="categories" value="Electro" />Electro
-          <input type="checkbox" name="categories" value="Moda" />Moda
-          <input type="checkbox" name="categories" value="Hogar" />Hogar
-          <input
-            type="checkbox"
-            name="categories"
-            value="Juguetería"
-          />Jugetería
-          <input type="checkbox" name="categories" value="Vida Sana" />Vida Sana
-        </div>
-        <div>
-          <label for="picture">Foto de usuario</label> <input type="file" />
-        </div>
-        <div>
-          <label for="password">Contraseña</label>
-          <input type="password" name="password" id="password" minlength="8" />
-        </div>
-        <div>
-          <label for="password">Repetir contraseña</label>
-          <input type="password" name="password" id="password" minlength="8" />
-        </div>
-
-        <button type="submit">Enviar</button>
-
-        <button type="reset">Limpiar</button>
-      </form>
+            <button class="reset" type="reset">Limpiar</button>
+          </div>
+          </div>
+        </form>
+      </div>
     </main>
     <footer>
       <ul class="footer">
